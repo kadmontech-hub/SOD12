@@ -1,0 +1,19 @@
+{
+  "name": "sod-ecosystem",
+  "version": "3.0.4",
+  "private": true,
+  "type": "module",
+  "description": "SØD Ecosystem Visual MVP V3 — Library V5 spatial shelves",
+  "scripts": {
+    "dev": "node --watch server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "vercel-build": "npm run build",
+    "check": "node scripts/check.mjs",
+    "test": "npm run build && node tests/safe-access.mjs && node tests/domain.mjs && node tests/visual.mjs && node tests/library-v5.mjs && node tests/v3.mjs && node tests/hub-panorama.mjs && node tests/hub-floating-icons.mjs && node tests/smoke.mjs && node tests/vercel.mjs",
+    "validate": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
